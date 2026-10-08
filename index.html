@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="planner">
+    <header>
+      <h1>Study planner</h1>
+      <p id="summary" class="summary">No tasks yet</p>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <input type="text" id="task-input" placeholder="What do you need to finish?" required>
+      <div class="row">
+        <select id="subject-input" aria-label="Subject">
+          <option>General</option>
+          <option>Maths</option>
+          <option>Programming</option>
+          <option>Database</option>
+          <option>Networks</option>
+          <option>Project</option>
+        </select>
+        <input type="date" id="date-input" aria-label="Due date">
+        <button type="submit">Add task</button>
+      </div>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">To do</button>
+      <button class="filter" data-filter="done">Done</button>
+    </nav>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <p id="empty" class="empty" hidden>Nothing here. Add a task above to get started.</p>
+
+    <button id="clear-done" class="clear-done">Clear completed</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
